@@ -11,7 +11,18 @@ const clearAllBtn = document.querySelector('#clear-all-btn');
 // State
 let notes = [];
 
+// Load notes from localStorage on page load
+function loadNotes() {
+    const storedNotes = localStorage.getItem('quicknotes_data');
+    if (storedNotes) {
+        notes = JSON.parse(storedNotes);
+    }
+}
 
+// Save notes to localStorage
+function saveNotes() {
+    localStorage.setItem('quicknotes_data', JSON.stringify(notes));
+}
 
 // Render the notes list
 function render() {
@@ -29,6 +40,15 @@ function render() {
         noteCount.textContent = `You have ${notes.length} notes.`;
     }
 
+    // Handle empty search results
+    if (filteredNotes.length === 0 && searchTerm !== '') {
+        const noMatchMsg = document.createElement('li');
+        noMatchMsg.textContent = "No notes match your search.";
+        noMatchMsg.style.fontStyle = "italic";
+        noMatchMsg.style.color = "#777";
+        notesList.appendChild(noMatchMsg);
+        return;
+    }
 
     // Render each note
     filteredNotes.forEach(note => {
