@@ -24,8 +24,8 @@ QuickNotes is a lightweight, browser-based note-taking application designed to h
 3. Open the index.html file in any modern web browser (Chrome, Firefox, Safari, Edge) or use Live Server extension.
 
 
-What I Learned
-i) Semantic HTML & Accessibility: How to structure a document using semantic tags (<header>, <main>, <section>, <footer>) and properly link <label> elements to inputs for better accessibility.
-ii) CSS Flexbox & Media Queries: How to use Flexbox to create a responsive form layout and apply @media queries to stack elements vertically on smaller screens.
-iii) DOM Manipulation & Security: How to dynamically create and append elements using createElement and textContent instead of innerHTML to prevent XSS vulnerabilities when rendering user-generated text.
-iv) Local Storage & State Management: How to persist data across page reloads using localStorage, JSON.stringify, and JSON.parse, and how to manage application state (adding, deleting, filtering) in JavaScript.
+## What I Learned
+- **Semantic HTML & Accessibility:** How to structure a document using semantic tags and properly link <label> elements to inputs for better accessibility.
+- **CSS Flexbox & Media Queries:** How to use Flexbox to create a responsive form layout and apply @media queries to stack elements vertically on smaller screens.
+- **DOM Manipulation & Security:** How to dynamically create and append elements using createElement and textContent instead of innerHTML to prevent XSS vulnerabilities when rendering user-generated text.
+- **Local Storage & State Management:** How to persist data across page reloads using localStorage, JSON.stringify, and JSON.parse, and how to manage application state (adding, deleting, filtering) in JavaScript.
