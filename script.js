@@ -30,6 +30,14 @@ function render() {
     notesList.innerHTML = '';
 
     
+    // Get search term
+    const searchTerm = searchInput.value.toLowerCase().trim();
+
+    // Filter notes based on search
+    const filteredNotes = notes.filter(note => 
+        note.text.toLowerCase().includes(searchTerm)
+    );
+
 
     // Update count (always based on total notes, not filtered)
     if (notes.length === 0) {
