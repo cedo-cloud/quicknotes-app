@@ -72,7 +72,19 @@ function addNote(e) {
     const text = noteInput.value.trim();
     const category = noteCategory.value;
 
+    // Validation
+    if (text.length === 0) {
+        errorMessage.textContent = "Please type a note first.";
+        return;
+    }
     
+    if (text.length > 200) {
+        errorMessage.textContent = "Notes must be 200 characters or fewer.";
+        return;
+    }
+
+    // Clear error if valid
+    errorMessage.textContent = "";
 
     // Create note object
     const newNote = {
