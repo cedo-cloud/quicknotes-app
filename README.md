@@ -16,7 +16,7 @@ QuickNotes is a lightweight, browser-based note-taking application designed to h
 
 1. Clone this repository or download the source code.
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/cedo-cloud/quicknotes-app.git
 
 2. Navigate to the project folder.
        cd quicknotes-app
