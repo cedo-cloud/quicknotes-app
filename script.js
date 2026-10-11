@@ -29,7 +29,6 @@ function render() {
     // Clear current list
     notesList.innerHTML = '';
 
-    
     // Get search term
     const searchTerm = searchInput.value.toLowerCase().trim();
 
@@ -37,7 +36,6 @@ function render() {
     const filteredNotes = notes.filter(note => 
         note.text.toLowerCase().includes(searchTerm)
     );
-
 
     // Update count (always based on total notes, not filtered)
     if (notes.length === 0) {
@@ -137,6 +135,15 @@ function deleteNote(id) {
 }
 
 
+function clearAllNotes() {
+    if (notes.length === 0) return;
+    
+    if (confirm("Delete all notes?")) {
+        notes = [];
+        saveNotes();
+        render();
+    }
+}
 
 // Event Listeners
 noteForm.addEventListener('submit', addNote);
